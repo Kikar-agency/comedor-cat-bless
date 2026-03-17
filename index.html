@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blessing Hogar — Línea Comedor</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--terracota:#974315;--azul:#788990;--bege:#E3D6C5;--perola:#F0EDE4;--verde:#8D957E;--dark:#1a1410;--text:#2d2520;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Jost',sans-serif;background:var(--perola);color:var(--text);}
+
+/* 🔴 OCULTAR COMBOS */
+#combos{display:none !important;}
+
+.hero{position:relative;height:100vh;display:flex;align-items:flex-end;overflow:hidden;}
+.hero-carousel{position:absolute;inset:0;}
+.hero-slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity 1s;}
+.hero-slide.active{opacity:1;}
+
+.hero-content{position:relative;z-index:2;padding:60px;color:white;}
+.hero-title{font-size:60px;}
+
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-carousel">
+    <!-- ✅ AHORA USA IMÁGENES DEL REPO -->
+    <div class="hero-slide active" style="background-image:url('hero-1.jpg')"></div>
+    <div class="hero-slide" style="background-image:url('hero-2.jpg')"></div>
+    <div class="hero-slide" style="background-image:url('hero-3.jpg')"></div>
+  </div>
+
+  <div class="hero-content">
+    <h1 class="hero-title">Diseño que transforma tu hogar</h1>
+  </div>
+</section>
+
+<!-- EJEMPLO PRODUCTOS -->
+<section class="section visible">
+  <div class="product-grid">
+
+    <!-- ✅ CAMBIADO: ahora usa archivos reales -->
+    <div class="product-card">
+      <img class="card-img" src="mesa-casino.jpg" alt="Mesa Casino">
+    </div>
+
+    <div class="product-card">
+      <img class="card-img" src="mesa-mekano.jpg" alt="Mesa Mekano">
+    </div>
+
+    <div class="product-card">
+      <img class="card-img" src="silla-clasica.jpg" alt="Silla Clasica">
+    </div>
+
+  </div>
+</section>
+
+<script>
+// simple carousel
+let slides=document.querySelectorAll('.hero-slide');
+let i=0;
+setInterval(()=>{
+  slides[i].classList.remove('active');
+  i=(i+1)%slides.length;
+  slides[i].classList.add('active');
+},4000);
+</script>
+
+</body>
+</html>
