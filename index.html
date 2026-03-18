@@ -90,8 +90,8 @@
   .lb-close{position:absolute;top:14px;right:14px;width:34px;height:34px;background:rgba(0,0,0,0.08);border:none;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:2;transition:background 0.2s;color:var(--text);}
   .lb-close:hover{background:rgba(0,0,0,0.16);}
   footer{background:var(--dark);padding:48px 40px;text-align:center;}
-  .foot-{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:300;color:var(--bege);letter-spacing:3px;margin-bottom:10px;}
-  .foot- em{color:var(--terracota);font-style:italic;}
+  .foot-logo{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:300;color:var(--bege);letter-spacing:3px;margin-bottom:10px;}
+  .foot-logo em{color:var(--terracota);font-style:italic;}
   .foot-sub{font-size:11px;letter-spacing:2px;color:rgba(227,214,197,0.3);text-transform:uppercase;margin-bottom:28px;}
   .foot-wa{display:inline-flex;align-items:center;gap:8px;background:#25D366;color:white;padding:12px 28px;border-radius:50px;font-size:14px;font-weight:500;text-decoration:none;transition:all 0.3s;}
   .foot-wa:hover{background:#1da851;transform:scale(1.03);}
@@ -137,12 +137,13 @@
   .hero-dot.active { background:white; transform:scale(1.3); }
 
 
-  /*  */
-  .nav--wrap { display:flex; align-items:center; text-decoration:none; }
-  .nav--svg { height:28px; width:auto; }
+  /* LOGO */
+  .nav-logo-wrap { display:flex; align-items:center; text-decoration:none; }
+  .nav-logo-wrap { display:flex; align-items:center; flex-shrink:0; }
+  .nav-logo-svg { height:36px; width:auto; max-width:180px; display:block; object-fit:contain; }
   .nav-logo-svg polygon, .nav-logo-svg path, .nav-logo-svg rect { fill: var(--terracota); }
   .foot-logo-svg { margin-bottom:16px; display:flex; justify-content:center; }
-  .foot-logo-svg .nav-logo-svg { height:32px; filter:brightness(0) invert(1); opacity:0.85; }
+  .foot-logo-svg .nav-logo-svg { height:36px; max-width:180px; filter:brightness(0) invert(1); opacity:0.85; }
 
 
   .card-img-wrap.no-img { background: linear-gradient(145deg,#ede8e0,#d4cac0); }
@@ -252,14 +253,14 @@ const catalog = {
         { id:"mc-04", name:"Mesa Mekano", line:"Línea Aimaretti", sub:"Chapa plegada · Nebraska", imgKey:"mesa-mekano", desc:"Patas de chapa plegada desarmables con regatones regulables. Tapa melamina 32mm Nebraska.", medidas:"1,35×0,70×0,76 alto" },
         { id:"mc-05", name:"Mesa Steel", line:"Línea Aimaretti", sub:"Caño 50×20 · Nebraska", imgKey:"mesa-steel", desc:"Estructura de caño rectangular con tapa melamina embutida. Diseño industrial refinado.", medidas:"1,45×0,76×0,76 alto — Color Nebraska" },
         { id:"mc-06", name:"Mesa Buona Rectangular", line:"Línea Aimaretti", sub:"Caño cónico · Melamina", imgKey:"mesa-buona", desc:"Patas de caño cónico negro con tapa melamina. Disponible rectangular o redonda.", medidas:"Rectangular 1,20×0,80 m" },
-        { id:"mc-07", name:"Mesa Buona Redonda", line:"Línea Aimaretti", sub:"Caño cónico · Melamina", imgKey:"mesa-buona-redonda", desc:"Versión redonda de la Mesa Buona. Patas de caño cónico negro.", medidas:"Diámetro 1,10 m" },
+        { id:"mc-07", name:"Mesa Buona Redonda", line:"Línea Aimaretti", sub:"Caño cónico · Melamina", imgKey:"mesa-buona", desc:"Versión redonda de la Mesa Buona. Patas de caño cónico negro.", medidas:"Diámetro 1,10 m" },
       ]},
     }
   },
   sillas: {
     label: "Sillas",
     subs: {
-      "clasicas": { label: "🪑 Confort", products: [
+      "clasicas": { label: "🪑 Clásicas", products: [
         { id:"sc-01", name:"Silla Dakar", line:"Línea Aimaretti", sub:"Caño platino · Ecocuero", imgKey:"silla-dakar", desc:"Estructura de caño 1½'' con pintura epoxi platino. Tapizado en ecocuero negro o tiza. Respaldo de melamina wengué.", medidas:"43 ancho × 49 prof × 84 alto cm" },
         { id:"sc-02", name:"Silla Marsella", line:"Línea Aimaretti", sub:"Caño · Tela John", imgKey:"silla-marsella", desc:"Tapizado enterizo en tela John Petróleo o Stone. Relleno con espuma de alta densidad. Caño 30×30mm.", medidas:"45 ancho × 54 prof × 98 alto cm" },
         { id:"sc-03", name:"Silla Corpus Remix", line:"Línea Inmacol", sub:"Madera · Tapizada", imgKey:"silla-corpus-remix", desc:"Estructura en madera maciza Caoba o Wengue. Asiento tapizado en tela gris oscuro o cuerina beige.", medidas:"95 alto × 40 ancho × 41 prof cm" },
@@ -275,7 +276,7 @@ const catalog = {
         { id:"sp-03", name:"Silla Capitone", line:"Fabricación Propia", sub:"Madera negra · Pana", imgKey:"silla-capitone", desc:"Respaldo y asiento tapizado en tela Pana. Patas laqueadas negras. Botones decorativos. Disponible negro y gris.", medidas:"Fabricación propia" },
         { id:"sp-04", name:"Silla Lisa", line:"Fabricación Propia", sub:"Madera negra · Tela rústica", imgKey:"silla-lisa", desc:"Tapizado en tela rústica, respaldo alto liso. Patas laqueadas negras. Negro o Gris.", medidas:"Fabricación propia" },
       ]},
-      "economicas": { label: "💚 Standard", products: [
+      "economicas": { label: "💚 Económicas", products: [
         { id:"se-01", name:"Silla Apilable", line:"Línea Aimaretti", sub:"Caño negro · Ecocuero", imgKey:"silla-apilable", desc:"Silla apilable de caño negro con tapizado en ecocuero. Negro o Tiza. Fácil de almacenar, resistente.", medidas:"42 ancho × 56 prof × 83 alto cm" },
         { id:"se-02", name:"Silla Mekano", line:"Línea Aimaretti", sub:"Caño · Chapa", imgKey:"silla-mekano", desc:"Caño curvado con asiento y respaldo en chapa 1,2mm. Pintura horneable epoxi. Color negro.", medidas:"Consultar" },
         { id:"se-03", name:"Silla Steel", line:"Línea Aimaretti", sub:"Caño · Chapa", imgKey:"silla-steel", desc:"Caño curvado con asiento y respaldo en chapa 1,2mm. Pintura epoxy poliéster. Varios colores.", medidas:"Consultar disponibilidad" },
