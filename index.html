@@ -189,7 +189,8 @@
   <p>Seleccioná la categoría que te interesa</p>
   <div class="cat-tabs">
     
-    <button class="cat-btn active" onclick="selectCat('mesas',this)">🪵 &nbsp;Mesas</button>
+    <button class="cat-btn active" onclick="selectCat('combos',this)">🍽️ &nbsp;Combos</button>
+    <button class="cat-btn" onclick="selectCat('mesas',this)">🪵 &nbsp;Mesas</button>
     <button class="cat-btn" onclick="selectCat('sillas',this)">🪑 &nbsp;Sillas</button>
   </div>
 </section>
@@ -232,6 +233,36 @@ const WA = "5493517072445";
 
 const catalog = {
   
+  combos: {
+    label: "Combos",
+    subs: {
+      "4p": { label: "👤 4 Personas", products: [
+        { id:"cb4-01", name:"Mesa Escandinava Redonda \u00d81,20m + 4 Sillas Corpus Remix", line:"", sub:"Juego de comedor", imgKey:"DSC_0551__1_", desc:"Mesa escandinava redonda en caoba con 4 Sillas Corpus Remix tapizadas en beige.", medidas:"" },
+        { id:"cb4-02", name:"Mesa Escandinava Redonda \u00d81,20m + 4 Sillas Atl\u00e1ntico Beige", line:"", sub:"Juego de comedor", imgKey:"DSC_0555", desc:"Mesa escandinava redonda en caoba con 4 Sillas Atl\u00e1ntico tapizadas en crema.", medidas:"" },
+        { id:"cb4-03", name:"Mesa Escandinava Redonda \u00d81,20m + 4 Sillas Atl\u00e1ntico Gris", line:"", sub:"Juego de comedor", imgKey:"DSC_0559", desc:"Mesa escandinava redonda en caoba con 4 Sillas Atl\u00e1ntico tapizadas en gris.", medidas:"" },
+        { id:"cb4-04", name:"Mesa Directorio 1,50m + 4 Sillas Dakar", line:"", sub:"Juego de comedor", imgKey:"DSC_9980", desc:"Mesa Directorio ca\u00f1o platino con tapa weng\u00fc\u00e9 + 4 Sillas Dakar. Conjunto moderno y resistente.", medidas:"" },
+        { id:"cb4-05", name:"Mesa German 0,90\u00d71,30m + 4 Sillas Guadalupe Negro/Gris", line:"", sub:"Juego de comedor", imgKey:"DSC_0668", desc:"Mesa German negro con 4 Sillas Guadalupe tapizadas en gris. Dise\u00f1o contempor\u00e1neo en negro total.", medidas:"" },
+        { id:"cb4-06", name:"Mesa German 0,90\u00d71,30m + 4 Sillas Capitone Gris", line:"", sub:"Juego de comedor", imgKey:"DSC_0913", desc:"Mesa German weng\u00fc\u00e9 con 4 Sillas Capitone tapizadas en gris. Toque premium con botones decorativos.", medidas:"" },
+        { id:"cb4-07", name:"Mesa German 0,90\u00d71,30m + 4 Sillas Marsella Gris", line:"", sub:"Juego de comedor", imgKey:"DSC_0910", desc:"Mesa German weng\u00fc\u00e9 con 4 Sillas Marsella tapizado enterizo gris. M\u00e1ximo confort y elegancia.", medidas:"" },
+        { id:"cb4-08", name:"Mesa German 0,90\u00d71,30m + 4 Sillas Guadalupe Weng\u00fc\u00e9/Gris", line:"", sub:"Juego de comedor", imgKey:"DSC_0905", desc:"Mesa German weng\u00fc\u00e9 con 4 Sillas Guadalupe tapizadas en gris. Calidez de la madera oscura.", medidas:"" },
+        { id:"cb4-09", name:"Mesa Mediterr\u00e1neo 0,90\u00d71,20m + 4 Sillas Guadalupe Negro/Gris", line:"", sub:"Juego de comedor", imgKey:"DSC_0887", desc:"Mesa Mediterr\u00e1neo tapa blanca con 4 Sillas Guadalupe negro/gris. Contraste bicolor impactante.", medidas:"" },
+        { id:"cb4-10", name:"Mesa Mediterr\u00e1neo 0,90\u00d71,20m + 4 Sillas Marsella Gris", line:"", sub:"Juego de comedor", imgKey:"DSC_0882", desc:"Mesa Mediterr\u00e1neo tapa blanca con 4 Sillas Marsella gris claro. Luminoso y moderno.", medidas:"" },
+        { id:"cb4-11", name:"Mesa German 0,90\u00d71,30m + 4 Sillas Guadalupe Negro/Estampado", line:"", sub:"Juego de comedor", imgKey:"DSC_0856", desc:"Mesa German negro con 4 Sillas Guadalupe tapizado estampado ramaje. Personalidad y dise\u00f1o.", medidas:"" },
+        { id:"cb4-12", name:"Mesa German 0,90\u00d71,30m + 4 Sillas Guadalupe Negro/Gris Oscuro", line:"", sub:"Juego de comedor", imgKey:"DSC_0849", desc:"Mesa German negro con 4 Sillas Guadalupe tapizadas en gris oscuro. Conjunto todo negro elegante.", medidas:"" },
+        { id:"cb4-13", name:"Mesa German 0,90\u00d71,30m + 4 Sillas Mediterr\u00e1neo Negro/Gris", line:"", sub:"Juego de comedor", imgKey:"DSC_0843", desc:"Mesa German negro con 4 Sillas Mediterr\u00e1neo tapizadas en gris. Respaldo curvado escandinavo.", medidas:"" },
+        { id:"cb4-14", name:"Mesa German 0,90\u00d71,30m + 4 Sillas Marsella Gris Claro", line:"", sub:"Juego de comedor", imgKey:"DSC_0838", desc:"Mesa German negro con 4 Sillas Marsella gris claro. El tapizado enterizo m\u00e1s c\u00f3modo de la l\u00ednea.", medidas:"" },
+        { id:"cb4-15", name:"Mesa German 0,90\u00d71,30m + 4 Sillas Mediterr\u00e1neo Negro/Beige", line:"", sub:"Juego de comedor", imgKey:"DSC_0830", desc:"Mesa German negro con 4 Sillas Mediterr\u00e1neo tapizadas en beige. Contraste c\u00e1lido sobre negro.", medidas:"" },
+      ]},
+      "6p": { label: "👤 6 Personas", products: [
+        { id:"cb6-01", name:"Mesa German 0,90\u00d71,70m + 6 Sillas Guadalupe Negro/Gris", line:"", sub:"Juego de comedor", imgKey:"DSC_0666", desc:"Mesa German negro 1,70m con 6 Sillas Guadalupe gris. El combo m\u00e1s popular para comedores familiares.", medidas:"" },
+        { id:"cb6-02", name:"Mesa German 0,90\u00d71,70m + 6 Sillas Guadalupe Negro/Estampado", line:"", sub:"Juego de comedor", imgKey:"DSC_0654", desc:"Mesa German negro 1,70m con 6 Sillas Guadalupe tapizado estampado ramaje. Diferente y llamativo.", medidas:"" },
+        { id:"cb6-03", name:"Mesa Mediterr\u00e1neo 0,90\u00d71,50m + 6 Sillas Atl\u00e1ntico Caoba/Gris", line:"", sub:"Juego de comedor", imgKey:"DSC_0809", desc:"Mesa Mediterr\u00e1neo tapa blanca 1,50m con 6 Sillas Atl\u00e1ntico caoba. Combinaci\u00f3n bicolor de gran impacto.", medidas:"" },
+      ]},
+      "8p": { label: "👤 8 Personas", products: [
+        { id:"cb8-01", name:"Mesa German Extensible 1,70\u21922,20m + 8 Sillas Guadalupe Negro/Gris", line:"", sub:"Juego de comedor", imgKey:"DSC_0662", desc:"Mesa German extensible hasta 2,20m con 8 Sillas Guadalupe gris. El combo m\u00e1s completo para grandes reuniones.", medidas:"" },
+      ]},
+    }
+  },
   mesas: {
     label: "Mesas",
     subs: {
@@ -291,14 +322,15 @@ const catalog = {
 };
 
 function getImgHTML(imgKey, altText) {
-  return "<img class=\"card-img\" src=\"img/" + imgKey + ".jpg\" alt=\"" + altText + "\" loading=\"lazy\" onerror=\"this.style.display='none';this.parentElement.classList.add('no-img')\">";
+  var folder = imgKey.startsWith("DSC") ? "img/combos/" : "img/";
+  return "<img class=\"card-img\" src=\"" + folder + imgKey + ".jpg\" alt=\"" + altText + "\" loading=\"lazy\" onerror=\"this.style.display='none';this.parentElement.classList.add('no-img')\">";
 }
 
 function getLBImgHTML(imgKey, altText) {
   return "<img class=\"lb-img\" src=\"img/" + imgKey + ".jpg\" alt=\"" + altText + "\" onerror=\"this.style.display='none'\">";
 }
 
-let currentCat = "mesas";
+let currentCat = "combos";
 let currentSub = null;
 
 function selectCat(cat, btn) {
