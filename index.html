@@ -322,7 +322,7 @@ const catalog = {
 };
 
 function getImgHTML(imgKey, altText) {
-  var folder = imgKey.startsWith("DSC") ? "img/combos/" : "img/";
+  var folder = "img/";
   return "<img class=\"card-img\" src=\"" + folder + imgKey + ".jpg\" alt=\"" + altText + "\" loading=\"lazy\" onerror=\"this.style.display='none';this.parentElement.classList.add('no-img')\">";
 }
 
